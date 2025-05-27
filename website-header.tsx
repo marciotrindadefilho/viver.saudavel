@@ -8,8 +8,8 @@ export default function WebsiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-200 fallback-header">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 fallback-nav">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -20,41 +20,52 @@ export default function WebsiteHeader() {
           <nav className="hidden md:flex items-center space-x-8">
             <a
               href="#loja"
-              className="flex items-center gap-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              className="flex items-center gap-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+              style={{ textDecoration: "none" }}
             >
               <Store size={18} />
-              Loja
+              <span>Loja</span>
             </a>
             <a
               href="#ebooks"
-              className="flex items-center gap-2 text-gray-700 hover:text-emerald-600 font-medium transition-colors"
+              className="flex items-center gap-2 text-gray-700 hover:text-emerald-600 font-medium transition-colors duration-200"
+              style={{ textDecoration: "none" }}
             >
               <Book size={18} />
-              Ebooks
+              <span>Ebooks</span>
             </a>
             <a
               href="#carrinho"
-              className="flex items-center gap-2 text-gray-700 hover:text-orange-600 font-medium transition-colors relative"
+              className="flex items-center gap-2 text-gray-700 hover:text-orange-600 font-medium transition-colors duration-200 relative"
+              style={{ textDecoration: "none" }}
             >
               <ShoppingCart size={18} />
-              Carrinho
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+              <span>Carrinho</span>
+              <span
+                className="absolute -top-2 -right-2 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+                style={{ backgroundColor: "#ef4444" }}
+              >
                 0
               </span>
             </a>
             <a
               href="#contato"
-              className="flex items-center gap-2 text-gray-700 hover:text-purple-600 font-medium transition-colors"
+              className="flex items-center gap-2 text-gray-700 hover:text-purple-600 font-medium transition-colors duration-200"
+              style={{ textDecoration: "none" }}
             >
               <Phone size={18} />
-              Fale Conosco
+              <span>Fale Conosco</span>
             </a>
             <a
               href="#login"
-              className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-emerald-600 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-emerald-700 font-medium transition-all"
+              className="flex items-center gap-2 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 shadow-md"
+              style={{
+                background: "linear-gradient(to right, #2563eb, #10b981)",
+                textDecoration: "none",
+              }}
             >
               <User size={18} />
-              Login
+              <span>Login</span>
             </a>
           </nav>
 
@@ -62,7 +73,9 @@ export default function WebsiteHeader() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className="text-gray-700 hover:text-blue-600 transition-colors p-2"
+              aria-label="Toggle menu"
+              style={{ border: "none", background: "none" }}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -71,42 +84,50 @@ export default function WebsiteHeader() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+          <div className="md:hidden py-4 border-t border-gray-200 bg-white">
             <div className="flex flex-col space-y-4">
               <a
                 href="#loja"
                 className="flex items-center gap-3 text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors"
+                style={{ textDecoration: "none" }}
               >
                 <Store size={20} />
-                Loja
+                <span>Loja</span>
               </a>
               <a
                 href="#ebooks"
                 className="flex items-center gap-3 text-gray-700 hover:text-emerald-600 font-medium py-2 transition-colors"
+                style={{ textDecoration: "none" }}
               >
                 <Book size={20} />
-                Ebooks
+                <span>Ebooks</span>
               </a>
               <a
                 href="#carrinho"
                 className="flex items-center gap-3 text-gray-700 hover:text-orange-600 font-medium py-2 transition-colors"
+                style={{ textDecoration: "none" }}
               >
                 <ShoppingCart size={20} />
-                Carrinho
+                <span>Carrinho</span>
               </a>
               <a
                 href="#contato"
                 className="flex items-center gap-3 text-gray-700 hover:text-purple-600 font-medium py-2 transition-colors"
+                style={{ textDecoration: "none" }}
               >
                 <Phone size={20} />
-                Fale Conosco
+                <span>Fale Conosco</span>
               </a>
               <a
                 href="#login"
-                className="flex items-center gap-3 bg-gradient-to-r from-blue-600 to-emerald-600 text-white px-4 py-3 rounded-lg font-medium mt-2"
+                className="flex items-center gap-3 text-white px-4 py-3 rounded-lg font-medium mt-2 shadow-md"
+                style={{
+                  background: "linear-gradient(to right, #2563eb, #10b981)",
+                  textDecoration: "none",
+                }}
               >
                 <User size={20} />
-                Login
+                <span>Login</span>
               </a>
             </div>
           </div>

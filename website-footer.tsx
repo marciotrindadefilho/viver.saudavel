@@ -97,7 +97,7 @@ export default function WebsiteFooter() {
               </div>
             </div>
 
-            <div className="bg-gray-800 p-4 rounded-lg">
+            <div className="bg-gray-800 p-4 rounded-lg max-w-sm">
               <h4 className="font-semibold mb-2">Newsletter</h4>
               <p className="text-sm text-gray-300 mb-3">Receba dicas de saúde semanalmente</p>
               <div className="flex gap-2 w-full">

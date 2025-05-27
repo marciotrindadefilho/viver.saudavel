@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -11,8 +9,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/viver.saudavel.github.io",
-  assetPrefix: "/viver.saudavel.github.io",
 }
 
-module.exports = nextConfig
+export default nextConfig
