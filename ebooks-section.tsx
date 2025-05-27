@@ -36,7 +36,6 @@ export default function EbooksSection() {
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
-      {/* DNA Background Pattern with Static SVG */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 left-10 w-40 h-40">
           <svg
@@ -92,11 +91,9 @@ export default function EbooksSection() {
               key={index}
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all flex flex-col transform hover:scale-105 duration-300"
             >
-              {/* Image with DNA accent using SVG */}
               <div
                 className={`h-48 bg-gradient-to-br ${ebook.color} p-6 flex items-center justify-center relative overflow-hidden`}
               >
-                {/* DNA background in card using SVG */}
                 <div className="absolute inset-0 opacity-10">
                   <svg
                     width="100%"
@@ -128,13 +125,11 @@ export default function EbooksSection() {
                     />
                   </svg>
                 </div>
-                {/* Emoji for visual appeal */}
                 <div className="text-6xl relative z-10" role="img" aria-label={ebook.category}>
                   {ebook.emoji}
                 </div>
               </div>
 
-              {/* Content */}
               <div className="p-6 space-y-4 flex-1 flex flex-col">
                 <div className="space-y-2 flex-1">
                   <div className="flex items-center justify-between">
@@ -169,11 +164,10 @@ export default function EbooksSection() {
                 <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                   <div className="text-2xl font-bold text-gray-800">{ebook.price}</div>
                   <button
-                    className={`text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-offset-2`}
+                    className={`text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all`}
                     style={{
                       background: `linear-gradient(to right, ${ebook.color.replace("from-", "").replace(" to-", ", ")})`,
                     }}
-                    aria-label={`Comprar ebook ${ebook.title}`}
                   >
                     Comprar
                   </button>
@@ -185,7 +179,7 @@ export default function EbooksSection() {
 
         <div className="text-center mt-12">
           <button
-            className="text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all shadow-lg hover:shadow-xl"
             style={{
               background: "linear-gradient(to right, #2563eb, #10b981)",
             }}

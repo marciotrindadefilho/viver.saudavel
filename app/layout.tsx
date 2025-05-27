@@ -18,21 +18,6 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <script src="https://cdn.tailwindcss.com"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              tailwind.config = {
-                theme: {
-                  extend: {
-                    fontFamily: {
-                      sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
-                    }
-                  }
-                }
-              }
-            `,
-          }}
-        />
       </head>
       <body className="font-sans antialiased bg-white">{children}</body>
     </html>

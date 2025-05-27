@@ -10,7 +10,14 @@ export default function AboutSection() {
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
                 Nossa{" "}
-                <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
+                <span
+                  style={{
+                    background: "linear-gradient(to right, #2563eb, #10b981)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
                   Missão
                 </span>
               </h2>
@@ -21,9 +28,19 @@ export default function AboutSection() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-r from-blue-50 to-emerald-50 p-6 rounded-2xl">
+            <div
+              className="p-6 rounded-2xl"
+              style={{
+                background: "linear-gradient(to right, rgba(59, 130, 246, 0.1), rgba(16, 185, 129, 0.1))",
+              }}
+            >
               <div className="flex items-start gap-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <div
+                  className="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0"
+                  style={{
+                    background: "linear-gradient(to right, #2563eb, #10b981)",
+                  }}
+                >
                   <Stethoscope className="text-white" size={24} />
                 </div>
                 <div className="space-y-2">
@@ -61,8 +78,14 @@ export default function AboutSection() {
               <h3 className="text-2xl font-bold text-gray-800">Nossos Valores</h3>
 
               <div className="space-y-4">
-                <div className="flex items-start gap-4 p-4 bg-blue-50 rounded-xl">
-                  <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <div
+                  className="flex items-start gap-4 p-4 rounded-xl"
+                  style={{ backgroundColor: "rgba(59, 130, 246, 0.1)" }}
+                >
+                  <div
+                    className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
+                    style={{ backgroundColor: "#2563eb" }}
+                  >
                     <span className="text-white font-bold text-sm">1</span>
                   </div>
                   <div>
@@ -73,8 +96,14 @@ export default function AboutSection() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-4 bg-emerald-50 rounded-xl">
-                  <div className="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <div
+                  className="flex items-start gap-4 p-4 rounded-xl"
+                  style={{ backgroundColor: "rgba(16, 185, 129, 0.1)" }}
+                >
+                  <div
+                    className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
+                    style={{ backgroundColor: "#10b981" }}
+                  >
                     <span className="text-white font-bold text-sm">2</span>
                   </div>
                   <div>
@@ -85,8 +114,14 @@ export default function AboutSection() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-4 bg-pink-50 rounded-xl">
-                  <div className="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <div
+                  className="flex items-start gap-4 p-4 rounded-xl"
+                  style={{ backgroundColor: "rgba(236, 72, 153, 0.1)" }}
+                >
+                  <div
+                    className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
+                    style={{ backgroundColor: "#ec4899" }}
+                  >
                     <span className="text-white font-bold text-sm">3</span>
                   </div>
                   <div>
@@ -97,8 +132,14 @@ export default function AboutSection() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-4 bg-orange-50 rounded-xl">
-                  <div className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <div
+                  className="flex items-start gap-4 p-4 rounded-xl"
+                  style={{ backgroundColor: "rgba(249, 115, 22, 0.1)" }}
+                >
+                  <div
+                    className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
+                    style={{ backgroundColor: "#f97316" }}
+                  >
                     <span className="text-white font-bold text-sm">4</span>
                   </div>
                   <div>
@@ -109,7 +150,12 @@ export default function AboutSection() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-gray-800 to-gray-700 p-6 rounded-2xl text-white">
+            <div
+              className="p-6 rounded-2xl text-white"
+              style={{
+                background: "linear-gradient(to right, #374151, #1f2937)",
+              }}
+            >
               <div className="flex items-center gap-3 mb-4">
                 <Award className="text-yellow-400" size={24} />
                 <h4 className="text-lg font-semibold">Nossa Expertise</h4>

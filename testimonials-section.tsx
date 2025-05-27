@@ -8,7 +8,6 @@ export default function TestimonialsSection() {
       location: "João Pessoa, PB",
       text: "Os ebooks da Viver Saudável mudaram minha vida! Aos 62 anos, nunca me senti tão ativa e saudável. As orientações são claras e fáceis de seguir.",
       rating: 5,
-      image: "/placeholder.svg?height=80&width=80",
     },
     {
       name: "João Santos",
@@ -16,7 +15,6 @@ export default function TestimonialsSection() {
       location: "Campina Grande, PB",
       text: "Excelente conteúdo! Como alguém que sempre teve dificuldades com exercícios, encontrei aqui um guia perfeito para minha idade. Recomendo muito!",
       rating: 5,
-      image: "/placeholder.svg?height=80&width=80",
     },
     {
       name: "Ana Costa",
@@ -24,7 +22,6 @@ export default function TestimonialsSection() {
       location: "Recife, PE",
       text: "A Georgia é uma profissional excepcional. Seus ebooks são baseados em ciência e experiência real. Me sinto mais confiante sobre minha saúde.",
       rating: 5,
-      image: "/placeholder.svg?height=80&width=80",
     },
   ]
 
@@ -40,7 +37,13 @@ export default function TestimonialsSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-gradient-to-br from-blue-50 to-emerald-50 p-6 rounded-2xl relative">
+            <div
+              key={index}
+              className="p-6 rounded-2xl relative"
+              style={{
+                background: "linear-gradient(to bottom right, rgba(59, 130, 246, 0.1), rgba(16, 185, 129, 0.1))",
+              }}
+            >
               <Quote className="absolute top-4 right-4 text-blue-200" size={32} />
 
               <div className="space-y-4">
@@ -53,11 +56,14 @@ export default function TestimonialsSection() {
                 <p className="text-gray-700 leading-relaxed italic">"{testimonial.text}"</p>
 
                 <div className="flex items-center gap-4 pt-4 border-t border-blue-100">
-                  <img
-                    src={testimonial.image || "/placeholder.svg"}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
+                  <div
+                    className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold"
+                    style={{
+                      background: "linear-gradient(to right, #2563eb, #10b981)",
+                    }}
+                  >
+                    {testimonial.name.charAt(0)}
+                  </div>
                   <div>
                     <div className="font-semibold text-gray-800">
                       {testimonial.name}, {testimonial.age} anos
@@ -71,7 +77,12 @@ export default function TestimonialsSection() {
         </div>
 
         <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-blue-600 to-emerald-600 p-8 rounded-2xl text-white">
+          <div
+            className="p-8 rounded-2xl text-white"
+            style={{
+              background: "linear-gradient(to right, #2563eb, #10b981)",
+            }}
+          >
             <h3 className="text-2xl font-bold mb-4">Junte-se a milhares de pessoas que já transformaram suas vidas!</h3>
             <p className="text-blue-100 mb-6">Comece hoje mesmo sua jornada para uma vida mais saudável e ativa</p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">

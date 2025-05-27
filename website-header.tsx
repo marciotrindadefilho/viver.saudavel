@@ -8,20 +8,17 @@ export default function WebsiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-200 fallback-header">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 fallback-nav">
+    <header className="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
           <div className="flex-shrink-0">
             <ViverSaudavelLogo variant="horizontal" size={180} />
           </div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a
               href="#loja"
               className="flex items-center gap-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
-              style={{ textDecoration: "none" }}
             >
               <Store size={18} />
               <span>Loja</span>
@@ -29,7 +26,6 @@ export default function WebsiteHeader() {
             <a
               href="#ebooks"
               className="flex items-center gap-2 text-gray-700 hover:text-emerald-600 font-medium transition-colors duration-200"
-              style={{ textDecoration: "none" }}
             >
               <Book size={18} />
               <span>Ebooks</span>
@@ -37,7 +33,6 @@ export default function WebsiteHeader() {
             <a
               href="#carrinho"
               className="flex items-center gap-2 text-gray-700 hover:text-orange-600 font-medium transition-colors duration-200 relative"
-              style={{ textDecoration: "none" }}
             >
               <ShoppingCart size={18} />
               <span>Carrinho</span>
@@ -51,7 +46,6 @@ export default function WebsiteHeader() {
             <a
               href="#contato"
               className="flex items-center gap-2 text-gray-700 hover:text-purple-600 font-medium transition-colors duration-200"
-              style={{ textDecoration: "none" }}
             >
               <Phone size={18} />
               <span>Fale Conosco</span>
@@ -61,7 +55,6 @@ export default function WebsiteHeader() {
               className="flex items-center gap-2 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 shadow-md"
               style={{
                 background: "linear-gradient(to right, #2563eb, #10b981)",
-                textDecoration: "none",
               }}
             >
               <User size={18} />
@@ -69,12 +62,10 @@ export default function WebsiteHeader() {
             </a>
           </nav>
 
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 hover:text-blue-600 transition-colors p-2"
-              aria-label="Toggle menu"
               style={{ border: "none", background: "none" }}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -82,14 +73,12 @@ export default function WebsiteHeader() {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200 bg-white">
             <div className="flex flex-col space-y-4">
               <a
                 href="#loja"
                 className="flex items-center gap-3 text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors"
-                style={{ textDecoration: "none" }}
               >
                 <Store size={20} />
                 <span>Loja</span>
@@ -97,7 +86,6 @@ export default function WebsiteHeader() {
               <a
                 href="#ebooks"
                 className="flex items-center gap-3 text-gray-700 hover:text-emerald-600 font-medium py-2 transition-colors"
-                style={{ textDecoration: "none" }}
               >
                 <Book size={20} />
                 <span>Ebooks</span>
@@ -105,7 +93,6 @@ export default function WebsiteHeader() {
               <a
                 href="#carrinho"
                 className="flex items-center gap-3 text-gray-700 hover:text-orange-600 font-medium py-2 transition-colors"
-                style={{ textDecoration: "none" }}
               >
                 <ShoppingCart size={20} />
                 <span>Carrinho</span>
@@ -113,7 +100,6 @@ export default function WebsiteHeader() {
               <a
                 href="#contato"
                 className="flex items-center gap-3 text-gray-700 hover:text-purple-600 font-medium py-2 transition-colors"
-                style={{ textDecoration: "none" }}
               >
                 <Phone size={20} />
                 <span>Fale Conosco</span>
@@ -123,7 +109,6 @@ export default function WebsiteHeader() {
                 className="flex items-center gap-3 text-white px-4 py-3 rounded-lg font-medium mt-2 shadow-md"
                 style={{
                   background: "linear-gradient(to right, #2563eb, #10b981)",
-                  textDecoration: "none",
                 }}
               >
                 <User size={20} />
