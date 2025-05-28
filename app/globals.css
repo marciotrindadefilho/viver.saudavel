@@ -14,21 +14,6 @@ body {
   color: #333;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-button:focus,
-a:focus {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .gradient-text {
   background: linear-gradient(to right, #22d3ee, #3b82f6, #10b981);
   -webkit-background-clip: text;
@@ -53,6 +38,18 @@ img {
   font-family: system-ui, sans-serif;
 }
 
+/* Focus styles for accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Error boundary styles */
 .error-boundary {
   padding: 2rem;
@@ -71,10 +68,10 @@ img {
 }
 
 /* Responsive images */
-/* img {
+img {
   max-width: 100%;
   height: auto;
-} */
+}
 
 /* Print styles */
 @media print {
